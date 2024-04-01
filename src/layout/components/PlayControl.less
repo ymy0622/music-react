@@ -1,0 +1,68 @@
+.progress-item {
+  font-size: 12px;
+  color: #b9bcc3;
+  font-family: 'Haettenschweiler', WeChatSansSS, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.play-control-buttons {
+  @apply flex-center gap-4 font-size-12;
+  color: #525a6c;
+
+  .play-control-button {
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+}
+
+.custom-progress-control {
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+  .ant-slider-rail {
+    background-color: #e5e6e8;
+  }
+
+  .ant-slider-track {
+    background-color: @primary-color;
+  }
+
+  .ant-slider-handle {
+    display: none;
+
+    &::after {
+      box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    }
+    &:focus::after {
+      box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+      width: 10px;
+      height: 10px;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+    }
+  }
+
+  &:hover {
+    .ant-slider-rail {
+      background-color: #e5e6e8;
+    }
+
+    .ant-slider-track {
+      background-color: @primary-color;
+    }
+
+    .ant-slider-handle {
+      display: block;
+
+      &::after {
+        box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      &:hover::after {
+        width: 10px;
+        height: 10px;
+        inset-inline-start: 0;
+        inset-block-start: 0;
+      }
+    }
+  }
+}
